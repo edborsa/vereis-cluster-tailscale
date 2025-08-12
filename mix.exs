@@ -23,7 +23,7 @@ defmodule Vereis.MixProject do
   defp deps do
     [
       {:libcluster, "~> 3.4"},
-      {:libcluster_tailscale, "~> 0.2"}
+      {:libcluster_tailscale, "~> 0.1.1"}
     ]
   end
 end
