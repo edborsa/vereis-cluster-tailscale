@@ -3,11 +3,12 @@ import Config
 config :libcluster,
   topologies: [
     tailscale: [
-      strategy: LibclusterTailscale.Strategy,
+      strategy: Cluster.Strategy.Tailscale,
       config: [
-        tailnet: System.get_env("TAILNET") || "your-tailnet.ts.net",
-        api_key: System.get_env("TAILSCALE_API_KEY"),
-        tag: "elixir-cluster"
+        authkey: System.get_env("TAILSCALE_AUTHKEY"),
+        tailnet: System.get_env("TAILNET"),
+        hostname: System.get_env("HOST"),
+        appname: "vereis"
       ]
     ]
   ]
